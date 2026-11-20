@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Básico -->
+    <meta name="description" content="Contactate con el equipo de soporte y ventas de TechFans para resolver tus consultas.">
+    <meta name="keywords" content="contacto TechFans, soporte técnico, consultas productos">
+    <title>TechFans - Contacto</title>
+    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>TechFans</h1>
+        <nav class="nav-bar" aria-label="Navegación principal">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="resenas.html">Reseñas</a></li>
+                <li><a href="contacto.html" class="active" aria-current="page">Contacto</a></li>
+                <li><a href="carrito.html" class="cart-link" aria-label="Ver carrito de compras">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Escribinos</h2>
+            <p class="section-subtitle">Dejanos tus dudas y te responderemos a la brevedad.</p>
+            
+            <!-- REEMPLAZÁ "tu_id_formspree" POR TU CÓDIGO REAL -->
+            <form id="contact-form" action="https://formspree.io" method="POST" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="name" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="message" rows="5" required aria-required="true"></textarea>
+                </div>
+
+                <!-- Mensaje dinámico de validación JS -->
+                <p id="form-feedback" role="alert" aria-live="assertive"></p>
+                
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 TechFans. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

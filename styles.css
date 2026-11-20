@@ -1,0 +1,475 @@
+/* --- ESTILOS GENERALES (Google Fonts) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- HEADER, NAV Y FOOTER --- */
+.main-header {
+    background-color: #d6e4f0; /* Azul Pastel */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #b9cee3;
+}
+
+.main-header h1 {
+    color: #5d7593;
+    margin-bottom: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #5d7593;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-list a:hover, .nav-list a.active {
+    background-color: #b9cee3;
+    color: #ffffff;
+}
+
+.main-footer {
+    background-color: #e3daf7; /* Violeta Pastel */
+    text-align: center;
+    padding: 15px;
+    color: #72638e;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* --- INICIO Y DEGRADADO (Propiedades de background) --- */
+.hero-section {
+    background: linear-gradient(135deg, #e8f0fe 0%, #f3e8ff 100%); /* Degradado Pastel */
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.hero-section h2 {
+    color: #4b5d73;
+    margin-bottom: 15px;
+}
+
+.multimedia-container {
+    margin-top: 25px;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* --- SECCIÓN PRODUCTOS (Flexbox Responsivo) --- */
+.products-section h2, .reviews-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5a5a5a;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que bajen si no entran */
+    justify-content: center;
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+.price {
+    font-weight: bold;
+    color: #6c8ebf;
+    font-size: 1.1rem;
+}
+
+/* --- SECCIÓN RESEÑAS (CSS Grid) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribución lógica automática */
+    gap: 20px;
+}
+
+.review-card {
+    background-color: #fff9e6; /* Amarillo/Crema Pastel */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #ffeaa7;
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-card h4 {
+    text-align: right;
+    color: #bfa054;
+}
+
+/* --- SECCIÓN CONTACTO Y FORMULARIO --- */
+.contact-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.btn-submit {
+    background-color: #b9cee3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #9bb3cc;
+}
+
+/* --- 4. MEDIA QUERIES (Contacto Responsivo y Ajustes Móviles) --- */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .contact-section {
+        padding: 15px; /* Se achican los márgenes internos en celulares */
+    }
+
+    .btn-submit {
+        padding: 15px; /* Botón más grande y fácil de tocar en pantallas táctiles */
+    }
+}
+
+/* ==========================================
+   NUEVOS ESTILOS: CARRITO, API Y ACCESIBILIDAD
+   ========================================== */
+
+/* Accesibilidad: Foco visible al navegar con teclado (Tab) */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid #6c8ebf;
+    outline-offset: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #6a6a6a;
+    margin-bottom: 25px;
+}
+
+/* Ajuste para las imágenes que vienen de la API */
+.product-card img {
+    object-fit: contain; /* Evita que se recorten las fotos de los productos de la API */
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.05rem;
+    height: 45px;
+    overflow: hidden;
+}
+
+.product-desc {
+    height: 55px !important;
+    overflow: hidden;
+}
+
+/* Botón Agregar al Carrito */
+.btn-add-cart {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #c3b1e1; /* Violeta pastel */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: #a992d1;
+}
+
+/* Enlace del Carrito en el Nav */
+.cart-link {
+    background-color: #ffffff;
+    border: 1px solid #b9cee3;
+}
+
+/* --- VISTA DEL CARRITO (carrito.html) --- */
+.cart-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #5a5a5a;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #e8eef5;
+    flex-wrap: wrap;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.cart-item-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.cart-item-info h4 {
+    color: #4b5d73;
+    margin-bottom: 5px;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-qty {
+    width: 30px;
+    height: 30px;
+    background-color: #d6e4f0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #4b5d73;
+    cursor: pointer;
+}
+
+.btn-qty:hover {
+    background-color: #b9cee3;
+}
+
+.cart-item-subtotal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.btn-remove {
+    background-color: #f8c8dc; /* Rosa pastel */
+    color: #7a3b52;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #f2a7c6;
+}
+
+.cart-summary {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #d6e4f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cart-total-text {
+    font-size: 1.3rem;
+    color: #4b5d73;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-clear {
+    background-color: #f8c8dc;
+    color: #7a3b52;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-continue {
+    background-color: #b9cee3;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.empty-cart, .loading-text {
+    text-align: center;
+    padding: 30px;
+    color: #7a7a7a;
+    font-size: 1.1rem;
+}
+
+/* --- NOTIFICACIONES FLOTANTES (DOM) --- */
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.notificacion.exito {
+    background-color: #77b5a9; /* Verde menta pastel */
+}
+
+.notificacion.aviso {
+    background-color: #d48c9e; /* Rosa viejo pastel */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MENSAJES DE VALIDACIÓN DE FORMULARIO --- */
+#form-feedback {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.feedback-error {
+    color: #c0392b;
+}
+
+.feedback-ok {
+    color: #27ae60;
+}
+
+.product-card img, .cart-item img {
+    display: block !important;
+    width: 100% !important;
+    min-height: 150px;
+}
+
+.cart-total-text, #cart-total {
+    color: #2c3e50 !important;
+    font-size: 1.4rem !important;
+    visibility: visible !important;
+}
